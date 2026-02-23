@@ -121,11 +121,14 @@ export default function Navigation({ muted, setMuted }: NavigationProps) {
           </span>
         </a>
 
-        {/* Menu Icon */}
+        {/* Menu Icon + Text */}
         <button
-          onClick={() => setMenuOpen(!menuOpen)} // ✅ now opens overlay
-          className="p-2 hover:text-yellow-500 transition cursor-pointer"
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="flex flex-col items-center gap-2 p-2 hover:text-yellow-500 transition cursor-pointer"
         >
+          <span className="rotate-180 font-productsFont text-[14px] tracking-wide [writing-mode:vertical-rl]">
+            Menu
+          </span>
           {menuOpen ? (
             <X size={20} />
           ) : (

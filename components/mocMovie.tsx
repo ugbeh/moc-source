@@ -37,14 +37,14 @@ export default function MovieShowcase({
   return (
     <div
       ref={containerRef}
-      className="w-full max-w-6xl mx-auto px-4 py-10"
+      className="w-full max-w-7xl mx-auto px-4 py-10"
     >
       {/* 2 Columns */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* LEFT: Video */}
-        <div className="animate-item rounded-2xl overflow-hidden bg-black relative group aspect-video">
+        <div className="animate-item rounded-2xl overflow-hidden bg-black relative group">
           <iframe
-            className="w-full h-full"
+            className="w-full h-full object-cover"
             src={`https://www.youtube.com/embed/${trailerId}`}
             title="Movie Trailer"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -96,7 +96,7 @@ function PosterCard({ src, index }: { src: string; index: number }) {
       <img
         src={src}
         alt={`Movie poster ${index + 1}`}
-        className="w-full h-[300px] object-contain transition-transform duration-300 group-hover:scale-105"
+        className="w-full h-[400px] object-contain transition-transform duration-300 group-hover:scale-105"
       />
 
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 bg-gradient-to-t from-black/60 to-transparent" />

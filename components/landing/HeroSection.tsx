@@ -118,17 +118,17 @@ const HeroSection = ({ onOpen, onWatchTrailer }: Props) => {
         className="mt-4"
       >
         <h2 className="font-productsFont text-xl md:text-2xl lg:text-3xl font-bold text-white tracking-wide">
-          In Cinemas February 27
+          In Cinemas February 27th
         </h2>
-        <p className="font-productsFont text-sm md:text-base text-white/80 mt-1">
+        {/* <p className="font-productsFont text-sm md:text-base text-white/80 mt-1">
           Cinemas in Nigeria & Ghana
-        </p>
+        </p> */}
         
         {/* Countdown Timer */}
-        <CountdownTimer targetDate={targetDate} />
+        {/* <CountdownTimer targetDate={targetDate} /> */}
         
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-6">
+        {/* <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-6">
           <motion.a
             href="https://www.filmoneng.com/movie/mothers-of-chibok"
             target="_blank"
@@ -151,7 +151,7 @@ const HeroSection = ({ onOpen, onWatchTrailer }: Props) => {
           >
             Watch Trailer
           </motion.button>
-        </div>
+        </div> */}
       </motion.div>
     </div>
   );

@@ -16,30 +16,11 @@ type Screening = {
 
 const screenings: Screening[] = [
   {
-    date: "November 2026",
-    label: "World Premiere",
-    image: "/assets/images/moc-world-screening.png",
-  },
-  {
-    date: "February 2026",
+    date: "February 27, 2026",
     label: "Africa Premiere Lagos",
     image: "/assets/images/moc-lagos-screening.png",
   },
-  {
-    date: "February 2026",
-    label: "Cape Town, South Africa",
-    image: "/assets/images/moc-sa-screening.png",
-  },
-  {
-    date: "February 2026",
-    label: "Johannesburg, South Africa",
-    image: "/assets/images/moc-ja-screening.png",
-  },
-  {
-    date: "September 2026",
-    label: "Kolne, Germany",
-    image: "/assets/images/moc-ko-screening.png",
-  },
+ 
 ];
 
 const ScreeningGrid = () => (

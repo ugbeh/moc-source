@@ -13,8 +13,8 @@ const ScrollIndicator = () => (
     }}
     className="absolute bottom-0 left-1/2 -translate-x-1/2 text-white text-[18px] z-10"
   >
-    <a href="#the-film-section" className="flex flex-col items-center">
-      <span>Scroll</span>
+    <a href="#trailer-section" className="flex flex-col items-center">
+      <span>Watch Trailer</span>
       <span className="-mt-2">↓</span>
     </a>
   </motion.div>

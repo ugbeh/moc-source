@@ -20,6 +20,7 @@ import SupportSection from "@/components/SupportSection";
 import Image from "next/image";
 import MovieBento from "@/components/mocMovie";
 import FilmmakersSection from "@/components/theFilm/FilmmakersSection";
+import DocumentaryStills from "@/components/theFilm/DocumentaryStills";
 
 export default function LandingPage() {
   const [muted, setMuted] = useState(true);
@@ -82,11 +83,9 @@ export default function LandingPage() {
       {/* Filmmakers Section */}
       <FilmmakersSection />
 
-      <img
-        src="/assets/images/moc-web-image-1.jpg"
-        alt="Mothers of Chibok"
-        className="w-full h-full object-cover"
-      />
+      {/* Documentary Stills Section */}
+      <DocumentaryStills />
+
       <section
         id="the-mothers"
         className="min-h-screen flex items-center bg-fixed bg-cover bg-center"
