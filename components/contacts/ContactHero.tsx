@@ -3,13 +3,14 @@
 import { useState } from "react";
 import Link from "next/link";
 import Partnership from "../theImpact/Partnership";
-import { FaInstagram, FaXTwitter, FaLinkedin, FaThreads } from "react-icons/fa6";
+import { FaInstagram, FaXTwitter, FaLinkedin, FaThreads, FaYoutube } from "react-icons/fa6";
 
 const socials = [
   { href: "https://www.instagram.com/mothersofchibok", Icon: FaInstagram, alt: "Instagram" },
   { href: "https://www.x.com/mothersofchibok", Icon: FaXTwitter, alt: "X (Twitter)" },
   { href: "https://www.linkedin.com/in/mothersofchibok", Icon: FaLinkedin, alt: "Linkedin" },
   { href: "https://www.threads.com/mothersofchibok", Icon: FaThreads, alt: "Threads" },
+  { href: "https://youtube.com/@mothersofchibok?si=b1PaeYubmNtU7QbI", Icon: FaYoutube, alt: "YouTube" },
 ];
 
 const ContactHero = () => {

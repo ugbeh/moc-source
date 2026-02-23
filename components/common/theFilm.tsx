@@ -16,27 +16,27 @@ type Screening = {
 
 const screenings: Screening[] = [
   {
-    date: "November 2024",
+    date: "November 2026",
     label: "World Premiere",
     image: "/assets/images/moc-world-screening.png",
   },
   {
-    date: "March 2025",
+    date: "February 2026",
     label: "Africa Premiere Lagos",
     image: "/assets/images/moc-lagos-screening.png",
   },
   {
-    date: "June 2025",
+    date: "February 2026",
     label: "Cape Town, South Africa",
     image: "/assets/images/moc-sa-screening.png",
   },
   {
-    date: "June 2025",
+    date: "February 2026",
     label: "Johannesburg, South Africa",
     image: "/assets/images/moc-ja-screening.png",
   },
   {
-    date: "September 2025",
+    date: "September 2026",
     label: "Kolne, Germany",
     image: "/assets/images/moc-ko-screening.png",
   },
