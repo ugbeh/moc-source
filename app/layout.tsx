@@ -29,6 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${afolkalips.variable} ${hahmlet.variable} ${productsFont.variable}`}
+        suppressHydrationWarning
       >
         <ClientLayout>{children}</ClientLayout>
         <SpeedInsights/>

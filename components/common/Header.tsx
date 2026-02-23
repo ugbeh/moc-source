@@ -19,14 +19,27 @@ const routes: Route[] = [
 export default function Header() {
   const pathname = usePathname();
   const [hash, setHash] = useState("");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const handleHashChange = () => setHash(window.location.hash);
     handleHashChange(); // set initial
     window.addEventListener("hashchange", handleHashChange);
 
     return () => window.removeEventListener("hashchange", handleHashChange);
   }, []);
+
+  // Prevent hydration mismatch by not rendering until mounted
+  if (!mounted) {
+    return (
+      <header className="w-full border-b p-14 flex justify-between items-center z-10">
+        <div className="text-[70px] tracking-tight4 leading-0 font-afolkalips text-gray-200">
+          {/* Return empty on server to match initial client render */}
+        </div>
+      </header>
+    );
+  }
 
   const fullPath = `${pathname}${hash}`;
   const route = routes.find((r) => r.path === fullPath || r.path === pathname);

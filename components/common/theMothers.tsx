@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -11,8 +11,8 @@ interface MotherSectionProps {
   alt: string;
   name: string;
   role: string;
-  text: string; // supports HTML
-  reverse?: boolean; // if true → Eight & Four, else → Four & Eight
+  text: string;
+  reverse?: boolean;
 }
 
 function MotherSection({
@@ -24,6 +24,11 @@ function MotherSection({
   reverse,
 }: MotherSectionProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <div
@@ -31,7 +36,6 @@ function MotherSection({
       className="mother-section container m-auto pl-24 pr-5 lg:px-34 py-8 sm:py-12"
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-        {/* Image Column */}
         <div
           className={`order-1 lg:col-span-4 ${
             reverse ? "lg:order-2" : "lg:order-1"
@@ -46,7 +50,6 @@ function MotherSection({
           />
         </div>
 
-        {/* Text Column */}
         <div
           className={`order-2 lg:col-span-8 ${
             reverse ? "lg:order-1 lg:text-right" : "lg:order-2 lg:text-left"
@@ -56,10 +59,14 @@ function MotherSection({
             {name}{" "}
             <span className="text-sm lg:text-xl text-gray-400">{role}</span>
           </h1>
-          <p
-            className="font-productsFont text-lg lg:text-xl tracking-tight leading-relaxed"
-            dangerouslySetInnerHTML={{ __html: text }}
-          />
+          {mounted ? (
+            <p
+              className="font-productsFont text-lg lg:text-xl tracking-tight leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: text }}
+            />
+          ) : (
+            <p className="font-productsFont text-lg lg:text-xl tracking-tight leading-relaxed" />
+          )}
         </div>
       </div>
     </div>
@@ -67,9 +74,12 @@ function MotherSection({
 }
 
 
-export default function 
-TheMothers() {
+export default function TheMothers() {
+  const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
+    setMounted(true);
+    
     const sections = gsap.utils.toArray<HTMLElement>(".mother-section");
 
     gsap.fromTo(
@@ -108,7 +118,6 @@ TheMothers() {
           has stopped watching.
         </p>
       </div>
-      {/* Yana */}
       <MotherSection
         image="/assets/images/yana-galang-moc.jpg"
         alt="Yana Galang Mothers of Chibok"
@@ -123,7 +132,6 @@ TheMothers() {
         </p>`}
       />
 
-      {/* Lydia */}
       <MotherSection
         image="/assets/images/lydia-yama-moc.jpg"
         alt="Lydia Yama Mothers of Chibok"
@@ -137,7 +145,6 @@ TheMothers() {
         reverse
       />
 
-      {/* Ladi */}
       <MotherSection
         image="/assets/images/ladi-lawan-moc.jpg"
         alt="Ladi Lawan Mothers of Chibok"
@@ -152,7 +159,6 @@ TheMothers() {
         </p>`}
       />
 
-      {/* Maryam */}
       <MotherSection
         image="/assets/images/maryam-ali-moc.jpg"
         alt="Maryam Ali Mothers of Chibok"
