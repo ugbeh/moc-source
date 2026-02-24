@@ -39,41 +39,38 @@ export default function MovieShowcase({
       ref={containerRef}
       className="w-full max-w-7xl mx-auto px-4 py-10"
     >
-      {/* 2 Columns */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* LEFT: Video */}
-        <div className="animate-item rounded-2xl overflow-hidden bg-black relative group">
-          <iframe
-            className="w-full h-full object-cover"
-            src={`https://www.youtube.com/embed/${trailerId}`}
-            title="Movie Trailer"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
+      {/* Video - Full Width */}
+      <div className="animate-item rounded-2xl overflow-hidden bg-black relative group mb-8">
+        <iframe
+          className="w-full aspect-video"
+          src={`https://www.youtube.com/embed/${trailerId}`}
+          title="Movie Trailer"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
 
-          <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-t from-black/40 to-transparent" />
-        </div>
+        <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-t from-black/40 to-transparent" />
+      </div>
 
-        {/* RIGHT: Poster Swiper */}
-        <div className="animate-item">
-          <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
-            spaceBetween={10}
-            slidesPerView={1}
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
-            breakpoints={{
-              640: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
-            className="h-full"
-          >
-            {posters.map((poster, index) => (
-              <SwiperSlide key={index}>
-                <PosterCard src={poster} index={index} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+      {/* Poster Swiper - Below Video */}
+      <div className="animate-item">
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={10}
+          slidesPerView={2}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          breakpoints={{
+            640: { slidesPerView: 3 },
+            1024: { slidesPerView: 5 },
+          }}
+          className="h-full"
+        >
+          {posters.map((poster, index) => (
+            <SwiperSlide key={index}>
+              <PosterCard src={poster} index={index} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );
