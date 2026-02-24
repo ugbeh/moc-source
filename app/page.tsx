@@ -57,7 +57,7 @@ export default function LandingPage() {
         className="bg-neutral-950 text-white py-12"
       >
         <MovieBento
-          trailerId="9bW3o6dYWk4"
+          trailerId="TGJ3ZQPos0A"
           posters={[
             "/assets/images/posters/moc-poster-1.webp",
             "/assets/images/posters/yana-moc-movie-poster.webp",
