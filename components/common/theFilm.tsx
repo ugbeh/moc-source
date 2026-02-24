@@ -17,7 +17,7 @@ type Screening = {
 const screenings: Screening[] = [
   {
     date: "February 27, 2026",
-    label: "Africa Premiere Lagos",
+    label: "Africa Premiere (Nigeria and Ghana)",
     image: "/assets/images/moc-lagos-screening.png",
   },
  
@@ -60,7 +60,7 @@ const ScreeningGrid = () => (
     </div>
 
     {/* Press mentions */}
-    <div className="mt-8  mb-10">
+    <div className="mt-8 font-bold mb-10">
       <div className="text-white text-right text-lg items-center flex gap-2">
         Press mentions
         <Image

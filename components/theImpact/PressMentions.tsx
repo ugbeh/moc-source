@@ -1,7 +1,7 @@
 "use client";
 
-import React from "react";
-import { ExternalLink } from "lucide-react";
+import React, { useState } from "react";
+import { ExternalLink, ChevronDown, ChevronUp } from "lucide-react";
 
 interface PressLink {
   id: number;
@@ -158,6 +158,11 @@ const pressLinks: PressLink[] = [
 ];
 
 export default function PressMentions() {
+  const [showAll, setShowAll] = useState(false);
+  const initialDisplayCount = 8;
+  const displayedLinks = showAll ? pressLinks : pressLinks.slice(0, initialDisplayCount);
+  const remainingCount = pressLinks.length - initialDisplayCount;
+
   return (
     <section id="press-mentions" className="py-16 px-6 max-w-6xl mx-auto">
       {/* Section Title */}
@@ -180,7 +185,7 @@ export default function PressMentions() {
 
       {/* Press Links Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {pressLinks.map((link) => (
+        {displayedLinks.map((link) => (
           <a
             key={link.id}
             href={link.url}
@@ -195,6 +200,32 @@ export default function PressMentions() {
           </a>
         ))}
       </div>
+
+      {/* Load More Button */}
+      {!showAll && remainingCount > 0 && (
+        <div className="flex justify-center mt-8">
+          <button
+            onClick={() => setShowAll(true)}
+            className="flex items-center gap-2 bg-[#B89C58] hover:bg-[#D4AF37] text-neutral-900 px-8 py-3 rounded-full transition-all duration-300 font-productsFont font-semibold"
+          >
+            Load More
+            <ChevronDown className="w-4 h-4" />
+          </button>
+        </div>
+      )}
+
+      {/* Show Less Button */}
+      {showAll && (
+        <div className="flex justify-center mt-8">
+          <button
+            onClick={() => setShowAll(false)}
+            className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-full transition-all duration-300 font-productsFont font-semibold border border-white/20"
+          >
+            Show Less
+            <ChevronUp className="w-4 h-4" />
+          </button>
+        </div>
+      )}
     </section>
   );
 }

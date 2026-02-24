@@ -9,14 +9,14 @@ const filmmakers = [
     role: "Director",
     image: "/assets/images/joel-kachi.jpeg",
     bio: "Joel 'Kachi' Benson is an award-winning documentary filmmaker whose work sits at the intersection of storytelling and social impact. Africa's first Venice Lion recipient for Immersive Storytelling, and Nigeria's first Emmy-winning documentary filmmaker, Benson is internationally recognized for elevating African stories to the global stage. Mothers of Chibok is his second feature film.",
-    videoUrl: "#",
+    videoUrl: "https://youtu.be/meeSw0mlPzM",
   },
   {
     name: "Joke Silva, MFR",
     role: "Executive Producer",
     image: "/assets/images/joke-silva.jpeg",
     bio: "Joke Silva, MFR, is one of Nigeria's most distinguished actors and cultural leaders, with a career spanning over four decades across stage and screen. A five-time Africa Movie Academy Award (AMAA) winner and co-founder of the Lufodo Group, she has played a defining role in shaping Nigeria's creative industry. She also serves as Executive Producer on Mothers of Chibok.",
-    videoUrl: "#",
+    videoUrl: "https://youtube.com/shorts/sVzu_T3SZ44?feature=share",
   },
 ];
 

@@ -17,6 +17,11 @@ const MENU_ITEMS = [
     href: "#the-film-section",
   },
   {
+    label: "Cinemas",
+    image: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1920&q=80",
+    href: "#the-film-section",
+  },
+  {
     label: "The Mothers",
     image: "/assets/images/moc-the-mothers-bckground.png",
     href: "#the-mothers",
@@ -167,38 +172,61 @@ export default function Navigation({ muted, setMuted }: NavigationProps) {
       >
         {/* Menu Items */}
         <nav className="flex flex-col w-full h-full ml-[140px]">
-          {/* First 2 full-width items */}
-          {MENU_ITEMS.slice(0, 2).map((item, i) => (
-            <a
-              key={item.label}
-              href={item.href}
-              onClick={() => setMenuOpen(false)}
-              ref={(el) => {
-                itemsRef.current[i] = el;
-              }}
-              className="flex-1 relative flex items-center opacity-0 group"
-              style={{
-                backgroundImage: `url(${item.image})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all duration-300" />
-              <span className="relative z-10 font-afolkalips px-10 py-5 text-center tracking-tight4 text-white leading-0 text-3xl sm:text-4xl md:text-[100px]">
-                {item.label}
-              </span>
-            </a>
-          ))}
-
-          {/* Third row: Impact and Press on same line (two-column layout) */}
+          {/* First row: The Film and Cinemas (two-column layout) */}
           <div className="flex flex-1 w-full">
-            {MENU_ITEMS.slice(2, 4).map((item, i) => (
+            {MENU_ITEMS.slice(0, 2).map((item, i) => (
               <a
                 key={item.label}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
                 ref={(el) => {
-                  itemsRef.current[i + 2] = el;
+                  itemsRef.current[i] = el;
+                }}
+                className="w-1/2 relative flex items-center justify-center group opacity-0"
+                style={{
+                  backgroundImage: `url(${item.image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all duration-300" />
+                <span className="relative z-10 font-afolkalips text-white text-4xl sm:text-5xl md:text-[100px] text-center tracking-tight4 leading-none px-6">
+                  {item.label}
+                </span>
+              </a>
+            ))}
+          </div>
+
+          {/* Second row: The Mothers (full-width) */}
+          <a
+            key={MENU_ITEMS[2].label}
+            href={MENU_ITEMS[2].href}
+            onClick={() => setMenuOpen(false)}
+            ref={(el) => {
+              itemsRef.current[2] = el;
+            }}
+            className="flex-1 relative flex items-center opacity-0 group"
+            style={{
+              backgroundImage: `url(${MENU_ITEMS[2].image})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all duration-300" />
+            <span className="relative z-10 font-afolkalips px-10 py-5 text-center tracking-tight4 text-white leading-0 text-3xl sm:text-4xl md:text-[100px]">
+              {MENU_ITEMS[2].label}
+            </span>
+          </a>
+
+          {/* Third row: Impact and Press on same line (two-column layout) */}
+          <div className="flex flex-1 w-full">
+            {MENU_ITEMS.slice(3, 5).map((item, i) => (
+              <a
+                key={item.label}
+                href={item.href}
+                onClick={() => setMenuOpen(false)}
+                ref={(el) => {
+                  itemsRef.current[i + 3] = el;
                 }}
                 className="w-1/2 relative flex items-center justify-center group opacity-0"
                 style={{
@@ -217,13 +245,13 @@ export default function Navigation({ muted, setMuted }: NavigationProps) {
 
           {/* Last row: Plant a Seed and Contact on same line (two-column layout) */}
           <div className="flex flex-1 w-full">
-            {MENU_ITEMS.slice(4).map((item, i) => (
+            {MENU_ITEMS.slice(5).map((item, i) => (
               <a
                 key={item.label}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
                 ref={(el) => {
-                  itemsRef.current[i + 4] = el;
+                  itemsRef.current[i + 5] = el;
                 }}
                 className="w-1/2 relative flex items-center justify-center group opacity-0"
                 style={{
