@@ -17,7 +17,7 @@ const MENU_ITEMS = [
     href: "#the-film-section",
   },
   {
-    label: "Cinemas",
+    label: "Cinema Listings",
     image: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1920&q=80",
     href: "#the-film-section",
   },

@@ -170,7 +170,7 @@ export default function PressMentions() {
         <h2 className="text-4xl md:text-5xl font-bold text-white font-productsFont mb-4">
           Press Mentions
         </h2>
-        <div className="flex justify-center gap-4 mb-8">
+        {/* <div className="flex justify-center gap-4 mb-8">
           <span className="px-4 py-2 bg-white/10 text-white text-sm rounded-full">
             News Articles
           </span>
@@ -180,7 +180,7 @@ export default function PressMentions() {
           <span className="px-4 py-2 bg-white/10 text-white text-sm rounded-full">
             Television
           </span>
-        </div>
+        </div> */}
       </div>
 
       {/* Press Links Grid */}

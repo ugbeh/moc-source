@@ -60,7 +60,7 @@ const ScreeningGrid = () => (
     </div>
 
     {/* Press mentions */}
-    <div className="mt-6 md:mt-8 font-bold mb-10 ">
+    {/* <div className="mt-6 md:mt-8 font-bold mb-10 ">
       <div className="text-white text-right text-sm md:text-lg items-center flex gap-2 pl-16 md:pl-20 lg:pl-6">
         Press mentions
         <Image
@@ -71,7 +71,7 @@ const ScreeningGrid = () => (
           className="animate-pulse-custom"
         />
       </div>
-    </div>
+    </div> */}
   </div>
 );
 
