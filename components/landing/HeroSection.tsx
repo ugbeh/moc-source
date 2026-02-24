@@ -125,7 +125,7 @@ const HeroSection = ({ onOpen, onWatchTrailer }: Props) => {
         </p> */}
         
         {/* Countdown Timer */}
-        {/* <CountdownTimer targetDate={targetDate} /> */}
+        <CountdownTimer targetDate={targetDate} />
         
         {/* CTA Buttons */}
         {/* <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-6">

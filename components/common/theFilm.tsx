@@ -24,22 +24,22 @@ const screenings: Screening[] = [
 ];
 
 const ScreeningGrid = () => (
-  <div className="mt-16 px-6 max-w-6xl mx-auto">
-    <h3 className="text-white text-6xl font-afolkalips mb-8 text-left">
+  <div className="mt-16 px-4 md:px-8 max-w-6xl mx-auto">
+    <h3 className="text-white text-4xl md:text-5xl lg:text-6xl font-afolkalips mb-8 text-left pl-16 md:pl-20 lg:pl-6">
       Screening Dates
     </h3>
 
-    {/* Half width cards - 2 columns, card pushed to right (half page) */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      {/* Empty first column to push card to right half */}
-      <div></div>
+    {/* Full width cards on mobile, 2 columns on desktop (card pushed to right half) */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 pl-16 md:pl-20 lg:pl-6">
+      {/* Empty first column to push card to right half on desktop only */}
+      <div className="hidden md:block"></div>
       
-      {/* Card in the second column (right half of page) - Original horizontal layout */}
-      <div className="screening-card bg-white/5 overflow-hidden flex h-48">
+      {/* Card in the second column (right half of page) - horizontal layout */}
+      <div className="screening-card bg-white/5 overflow-hidden flex h-36 md:h-48 relative ">
         {/* Left: Date block */}
-        <div className="w-1/3 bg-white font-productsFont tracking-tight3 flex flex-col text-center items-center justify-center p-4">
-          <Calendar className="w-6 h-6 text-black mb-2" />
-          <p className="text-sm text-black">{screenings[0].date}</p>
+        <div className="w-1/3 bg-white font-productsFont tracking-tight3 flex flex-col text-center items-center justify-center p-2 md:p-4">
+          <Calendar className="w-4 h-4 md:w-6 md:h-6 text-black mb-1 md:mb-2" />
+          <p className="text-xs md:text-sm text-black">{screenings[0].date}</p>
         </div>
 
         {/* Right: Image + label */}
@@ -50,8 +50,8 @@ const ScreeningGrid = () => (
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-black/40 flex items-center justify-center p-3">
-            <p className="text-white text-lg font-productsFont text-center leading-snug">
+          <div className="absolute inset-0 bg-black/40 flex items-center justify-center p-2 md:p-3">
+            <p className="text-white text-sm md:text-lg font-productsFont text-center leading-snug">
               {screenings[0].label}
             </p>
           </div>
@@ -60,14 +60,14 @@ const ScreeningGrid = () => (
     </div>
 
     {/* Press mentions */}
-    <div className="mt-8 font-bold mb-10">
-      <div className="text-white text-right text-lg items-center flex gap-2">
+    <div className="mt-6 md:mt-8 font-bold mb-10 ">
+      <div className="text-white text-right text-sm md:text-lg items-center flex gap-2 pl-16 md:pl-20 lg:pl-6">
         Press mentions
         <Image
           src="/assets/images/forward-arrow.png"
           alt="Mothers of Chibok"
-          width={15}
-          height={15}
+          width={12}
+          height={12}
           className="animate-pulse-custom"
         />
       </div>

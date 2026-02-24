@@ -164,7 +164,7 @@ export default function PressMentions() {
   const remainingCount = pressLinks.length - initialDisplayCount;
 
   return (
-    <section id="press-mentions" className="py-16 px-6 max-w-6xl mx-auto">
+    <section id="press-mentions" className="py-16 px-6 max-w-6xl mx-auto pl-16 md:pl-20 lg:px-6">
       {/* Section Title */}
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-bold text-white font-productsFont mb-4">

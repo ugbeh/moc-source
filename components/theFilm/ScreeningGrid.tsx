@@ -11,7 +11,7 @@ const screenings = [
 
 export default function ScreeningGrid() {
   return (
-    <div className="mt-16 px-6 max-w-6xl mx-auto">
+    <div className="mt-16 px-6 max-w-6xl mx-auto pl-16 md:pl-20 lg:pl-6">
       <h3 className="text-white text-2xl font-semibold mb-8 text-left">
         Screening Dates
       </h3>

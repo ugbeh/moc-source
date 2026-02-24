@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -8,66 +8,14 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function SupportSection() {
   const [formOpen, setFormOpen] = useState(false);
-  const [formLoaded, setFormLoaded] = useState(false);
-  const [usePaystack, setUsePaystack] = useState(false);
-
-  const loadDonationForm = () => {
-    if (formLoaded) return;
-
-    // Load jQuery first
-    const jQueryScript = document.createElement("script");
-    jQueryScript.src = "https://code.jquery.com/jquery-3.7.1.min.js";
-    jQueryScript.onload = () => {
-      // Load Click & Pledge script after jQuery is ready
-      const cnpScript = document.createElement("script");
-      cnpScript.src =
-        "https://resources.connect.clickandpledge.com/Library/iframe-1.0.0.min.js?638960413605797901";
-      cnpScript.className = "CnP_formloader";
-      cnpScript.dataset.guid = "dc8934d0-5a47-4c2e-90b4-6d80d6fa602a";
-      cnpScript.dataset.title = "Donation Form";
-      document.body.appendChild(cnpScript);
-
-      setFormLoaded(true);
-    };
-
-    document.body.appendChild(jQueryScript);
-  };
 
   const openForm = () => {
     setFormOpen(true);
-    if (!usePaystack && !formLoaded) loadDonationForm();
   };
 
   const closeForm = () => {
     setFormOpen(false);
-
-    // Optionally remove scripts and reset after a short delay
-    setTimeout(() => {
-      const cnpScript = document.querySelector(".CnP_formloader");
-      const jqScript = document.querySelector(`script[src*="jquery"]`);
-      if (cnpScript) cnpScript.remove();
-      if (jqScript) jqScript.remove();
-      const formContainer = document.getElementById("CnP_inlineform");
-      if (formContainer) formContainer.innerHTML = "";
-      setFormLoaded(false);
-    }, 500);
   };
-
-  useEffect(() => {
-    return () => {
-      closeForm();
-    };
-  }, []);
-
-  const handleToggle = () => {
-    setUsePaystack(!usePaystack)
-  }
-
-  useEffect(() => {
-    if (!usePaystack && formOpen && !formOpen) {
-      loadDonationForm()
-    }
-  }, [usePaystack, formOpen])
 
   return (
     <section className="min-h-screen text-white flex flex-col justify-between font-productsFont tracking-tight3 py-10">
@@ -179,27 +127,17 @@ export default function SupportSection() {
               </button>
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-2xl font-semibold text-center flex-1">
-                  {usePaystack ? "Pay with Paystack" : "Donation Form"}
+                  Make a Donation
                 </h2>
-                <Button
-                  onClick={handleToggle}
-                  className="bg-[#B89C58] hover:bg-yellow-800 text-white px-4 py-2 text-sm rounded-none ml-4"
-                >
-                  Switch to {usePaystack ? "Click & Pledge" : "Paystack"}
-                </Button>
               </div>
               
-               {usePaystack ? (
-                <iframe
-                  src="https://paystack.shop/pay/plant-a-seed"
-                  width="100%"
-                  height="600"
-                  allow="payment"
-                  className="rounded-md border-0"
-                />
-              ) : (
-                <div id="CnP_inlineform" className="mt-8"></div>
-              )}
+              <iframe
+                src="https://paystack.shop/pay/plant-a-seed"
+                width="100%"
+                height="600"
+                allow="payment"
+                className="rounded-md border-0"
+              />
             </motion.div>
           </motion.div>
         )}

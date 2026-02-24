@@ -38,7 +38,7 @@ const FilmmakersSection = () => {
       <div className="absolute left-8 md:left-16 top-1/4 w-px h-24 bg-gradient-to-b from-[#B89C58]/40 to-transparent" />
       <div className="absolute right-8 md:right-16 top-1/3 w-px h-24 bg-gradient-to-b from-[#B89C58]/40 to-transparent" />
       
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10 pl-16 md:pl-20 lg:pl-4">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 mb-4">

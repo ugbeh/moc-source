@@ -37,7 +37,7 @@ export default function MovieShowcase({
   return (
     <div
       ref={containerRef}
-      className="w-full max-w-7xl mx-auto px-4 py-10"
+      className="w-full max-w-7xl mx-auto px-4 py-10 pl-16 md:pl-20 lg:pl-0"
     >
       {/* Video - Full Width */}
       <div className="animate-item rounded-2xl overflow-hidden bg-black relative group mb-8">

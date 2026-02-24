@@ -29,7 +29,7 @@ export default function DocumentaryStills() {
       </div>
 
       {/* Section Header */}
-      <div className="relative z-10 container mx-auto px-6 mb-16">
+      <div className="relative z-10 container mx-auto px-6 mb-16 pl-16 md:pl-20 lg:pl-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -46,7 +46,7 @@ export default function DocumentaryStills() {
       {/* Masonry-style Gallery */}
       <div 
         ref={containerRef}
-        className="relative z-10 container mx-auto px-4 md:px-12"
+        className="relative z-10 container mx-auto px-4 md:px-12 pl-16 md:pl-20 lg:px-4"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {/* Large featured image */}
