@@ -27,6 +27,11 @@ const MENU_ITEMS = [
     href: "#the-impact",
   },
   {
+    label: "Press",
+    image: "https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?w=1920&q=80",
+    href: "#press-mentions",
+  },
+  {
     label: "Plant a Seed",
     image: "/assets/images/moc-donate-bckground.png",
     href: "#plant-seed",
@@ -115,7 +120,7 @@ export default function Navigation({ muted, setMuted }: NavigationProps) {
       {/* Vertical Navigation (Left side) */}
       <div className="fixed inset-y-0 left-0 flex flex-col items-center justify-between py-6 px-4 text-white text-xs tracking-wide border-r-2 border-white z-40 max-w-full">
         {/* Top Text */}
-        <a href="https://jbmultimedia.com" target="_blank">
+        <a href="https://jbmultimedia.com" target="_blank" rel="noopener noreferrer">
           <span className="rotate-180 font-productsFont tracking-tight3 text-[16px] [writing-mode:vertical-rl]">
             By Kachi Benson
           </span>
@@ -162,8 +167,8 @@ export default function Navigation({ muted, setMuted }: NavigationProps) {
       >
         {/* Menu Items */}
         <nav className="flex flex-col w-full h-full ml-[140px]">
-          {/* First 3 full-width items */}
-          {MENU_ITEMS.slice(0, 3).map((item, i) => (
+          {/* First 2 full-width items */}
+          {MENU_ITEMS.slice(0, 2).map((item, i) => (
             <a
               key={item.label}
               href={item.href}
@@ -185,15 +190,40 @@ export default function Navigation({ muted, setMuted }: NavigationProps) {
             </a>
           ))}
 
-          {/* Last row: two-column layout */}
+          {/* Third row: Impact and Press on same line (two-column layout) */}
           <div className="flex flex-1 w-full">
-            {MENU_ITEMS.slice(3).map((item, i) => (
+            {MENU_ITEMS.slice(2, 4).map((item, i) => (
               <a
                 key={item.label}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
                 ref={(el) => {
-                  itemsRef.current[i + 3] = el; // offset index
+                  itemsRef.current[i + 2] = el;
+                }}
+                className="w-1/2 relative flex items-center justify-center group opacity-0"
+                style={{
+                  backgroundImage: `url(${item.image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all duration-300" />
+                <span className="relative z-10 font-afolkalips text-white text-4xl sm:text-5xl md:text-[100px] text-center tracking-tight4 leading-none px-6">
+                  {item.label}
+                </span>
+              </a>
+            ))}
+          </div>
+
+          {/* Last row: Plant a Seed and Contact on same line (two-column layout) */}
+          <div className="flex flex-1 w-full">
+            {MENU_ITEMS.slice(4).map((item, i) => (
+              <a
+                key={item.label}
+                href={item.href}
+                onClick={() => setMenuOpen(false)}
+                ref={(el) => {
+                  itemsRef.current[i + 4] = el;
                 }}
                 className="w-1/2 relative flex items-center justify-center group opacity-0"
                 style={{

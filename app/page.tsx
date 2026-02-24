@@ -12,6 +12,7 @@ import TheMothers from "@/components/common/theMothers";
 // import Partnership from "@/components/theImpact/Partnership";
 import GoalsTimeline from "@/components/theImpact/GoalsTimeline";
 import BeneContent from "@/components/theImpact/BeneContent";
+import PressMentions from "@/components/theImpact/PressMentions";
 //import TheImpactContent from "@/components/theImpact/TheImpactContent";
 import TheHeadline from "@/components/theImpact/TheHeadline";
 // import CreditSection from "@/components/theFilm/CreditSection";
@@ -128,6 +129,7 @@ export default function LandingPage() {
           <TheHeadline />
           {/*<TheImpactContent />*/}  
           <BeneContent />
+          <PressMentions />
           <GoalsTimeline />
           {/*<Partnership />*/}
         </div>
