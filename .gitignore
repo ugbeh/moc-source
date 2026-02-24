@@ -39,3 +39,9 @@ coverage/
 
 # Misc
 *.tsbuildinfo
+
+# Large media files
+*.mp4
+*.mov
+*.avi
+*.webm
