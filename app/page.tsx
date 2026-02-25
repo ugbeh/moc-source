@@ -16,6 +16,7 @@ import SupportSection from "@/components/SupportSection";
 import MovieBento from "@/components/mocMovie";
 import FilmmakersSection from "@/components/theFilm/FilmmakersSection";
 import DocumentaryStills from "@/components/theFilm/DocumentaryStills";
+import PostersSection from "@/components/theFilm/PostersSection";
 
 export default function LandingPage() {
   const [muted, setMuted] = useState(true);
@@ -75,16 +76,7 @@ export default function LandingPage() {
           The Mothers
         </div>
       </header>
-        <MovieBento
-          posters={[
-            "/assets/images/posters/Yana.webp",
-            "/assets/images/posters/Ladi.jpeg",
-            "/assets/images/posters/lydia.jpeg",
-            "/assets/images/posters/maryam (2).webp",
-          ]}
-          showTrailer={false}
-          showPosters={true}
-        />
+        <PostersSection />
       </section>
 
       {/* <section
