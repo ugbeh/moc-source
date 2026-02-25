@@ -53,7 +53,7 @@ export default function PostersSection() {
                   {mother.name}
                 </h3>
                 <p className="text-sm text-gray-300 mb-3">{mother.role}</p>
-                <p className="text-lg leading-snug line-clamp-6">{mother.text}</p>
+                <p className="text-lg leading-snug">{mother.text}</p>
               </div>
             </div>
           ))}
