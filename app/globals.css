@@ -99,3 +99,29 @@ a {
 .animate-pulse-custom {
   animation: pulseCustom 2s ease-in-out infinite;
 }
+
+/* Chalk effect for HeroSection title */
+.chalk-text {
+  color: #f5f5f5;
+  text-shadow: 
+    /* Primary chalk effect - creates the dusty appearance */
+    -1px -1px 0 #d4d4d4,
+    1px -1px 0 #d4d4d4,
+    -1px 1px 0 #d4d4d4,
+    1px 1px 0 #d4d4d4,
+    /* Secondary layer - adds depth and texture */
+    -2px -2px 0 #e8e8e8,
+    2px -2px 0 #e8e8e8,
+    -2px 2px 0 #e8e8e8,
+    2px 2px 0 #e8e8e8,
+    /* Tertiary layer - chalk dust effect */
+    0 0 8px rgba(255, 255, 255, 0.5),
+    0 0 16px rgba(255, 255, 255, 0.3),
+    /* Final layer - subtle noise texture feel */
+    -3px 0 2px rgba(200, 200, 200, 0.3),
+    3px 0 2px rgba(200, 200, 200, 0.3),
+    0 -3px 2px rgba(200, 200, 200, 0.3),
+    0 3px 2px rgba(200, 200, 200, 0.3);
+  /* Slight wobble to simulate hand-drawn chalk */
+  font-style: normal;
+}

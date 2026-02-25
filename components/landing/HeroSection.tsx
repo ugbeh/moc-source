@@ -62,6 +62,7 @@ const HeroSection = ({ onOpen, onWatchTrailer }: Props) => {
           lg:mt-12
           3xl:mt-16
           mb-4
+          font-extrabold
         "
       >
         {title.split("").map((char, i) => (

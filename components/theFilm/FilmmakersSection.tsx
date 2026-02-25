@@ -15,7 +15,7 @@ const filmmakers = [
     name: "Joke Silva, MFR",
     role: "Executive Producer",
     image: "/assets/images/joke-silva.jpeg",
-    bio: "Joke Silva, MFR, is one of Nigeria's most distinguished actors and cultural leaders, with a career spanning over four decades across stage and screen. A five-time Africa Movie Academy Award (AMAA) winner and co-founder of the Lufodo Group, she has played a defining role in shaping Nigeria's creative industry. She also serves as Executive Producer on Mothers of Chibok.",
+    bio: "Joke Silva, MFR, is one of Nigeria's most distinguished actors and cultural leaders, with a career spanning over four decades across stage and screen. A five-time Africa Movie Academy Award (AMAA) winner and co-founder of the Lufodo Group,a premier entertainment solutions group, she has played a defining role in shaping Nigeria's creative industry. She also serves as Executive Producer on Mothers of Chibok.                 ",
     videoUrl: "https://youtube.com/shorts/sVzu_T3SZ44?feature=share",
   },
 ];
@@ -78,7 +78,7 @@ const FilmmakersSection = () => {
                   </div>
                   
                   {/* Content */}
-                  <div className="flex-1 text-center md:text-left">
+                  <div className="flex-1 flex flex-col text-center md:text-left">
                     <h3 className="text-3xl md:text-4xl font-guthenBloots text-white mb-0.5 group-hover:text-[#D4AF37] transition-colors duration-300">
                       {filmmaker.name}
                     </h3>
@@ -87,7 +87,7 @@ const FilmmakersSection = () => {
                       {filmmaker.role}
                     </p>
                     
-                    <p className="text-gray-300 font-productsFont text-sm leading-relaxed mb-4">
+                    <p className="text-gray-300 font-productsFont text-sm leading-relaxed mb-4 flex-1">
                       {filmmaker.bio}
                     </p>
                     

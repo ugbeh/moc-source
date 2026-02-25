@@ -43,8 +43,8 @@ export default function PostersSection() {
               <Image
                 src={mother.image}
                 alt={mother.name}
-                width={500}
-                height={700}
+                width={300}
+                height={600}
                 className="w-full h-[700px] object-cover transition-transform duration-500 group-hover:scale-105"
               />
               {/* Overlay with text on hover */}
