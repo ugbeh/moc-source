@@ -153,9 +153,14 @@ export default function Navigation({ muted, setMuted }: NavigationProps) {
 
         {/* Right Text + Sound Toggle */}
         <div className="flex flex-row items-center gap-4">
-          <span className="font-productsFont tracking-tight3 text-[16px]">
+          <a
+            href="https://paystack.shop/pay/plant-a-seed"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-productsFont tracking-tight3 text-[16px] hover:text-yellow-500 transition cursor-pointer"
+          >
             Donate
-          </span>
+          </a>
           <button
             onClick={() => setMuted(!muted)}
             className="hover:text-yellow-500 transition"

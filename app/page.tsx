@@ -51,13 +51,8 @@ export default function LandingPage() {
       >
         <MovieBento
           trailerId="TGJ3ZQPos0A"
-          posters={[
-            "/assets/images/posters/moc-poster-1.webp",
-            "/assets/images/posters/yana-moc-movie-poster.webp",
-            "/assets/images/posters/ladi-moc-movies-poster.webp",
-            "/assets/images/posters/lydia-moc-movie-poster.webp",
-            "/assets/images/posters/maryam.webp",
-          ]}
+          showTrailer={true}
+          showPosters={false}
         />
       </section>
 
@@ -73,7 +68,26 @@ export default function LandingPage() {
         </div>
       </SectionWithBackground>
 
-      <section
+      {/* Posters Section - After The Film Section */}
+      <section className="bg-neutral-950 text-white py-12">
+        <header className="border-b p-10 lg:p-16 flex justify-between items-center">
+        <div className="lg:text-[70px] text-[40px] tracking-tight4 leading-0 font-guthenBloots text-gray-200">
+          The Mothers
+        </div>
+      </header>
+        <MovieBento
+          posters={[
+            "/assets/images/posters/Yana.webp",
+            "/assets/images/posters/Ladi.jpeg",
+            "/assets/images/posters/lydia.jpeg",
+            "/assets/images/posters/maryam (2).webp",
+          ]}
+          showTrailer={false}
+          showPosters={true}
+        />
+      </section>
+
+      {/* <section
         id="the-mothers"
         className="min-h-screen flex items-center bg-fixed bg-cover bg-center"
         style={{ backgroundImage: "url('/assets/images/the-mothers-bg.jpg')" }}
@@ -81,7 +95,7 @@ export default function LandingPage() {
         <div className="min-w-full relative z-10">
           <TheMothers />
         </div>
-      </section>
+      </section> */}
 
       {/* Filmmakers Section */}
       <FilmmakersSection />

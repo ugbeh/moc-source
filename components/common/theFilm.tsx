@@ -26,7 +26,7 @@ const screenings: Screening[] = [
 const ScreeningGrid = () => (
   <div className="mt-16 px-4 md:px-8 max-w-6xl mx-auto">
     <h3 className="text-white text-4xl md:text-5xl lg:text-6xl font-guthenBloots mb-8 text-left">
-      Screening Dates
+      Cinema Listings
     </h3>
 
     {/* Full width cards on mobile, 2 columns on desktop (card pushed to right half) */}

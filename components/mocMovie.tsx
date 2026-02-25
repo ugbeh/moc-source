@@ -10,13 +10,17 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 type MovieShowcaseProps = {
-  trailerId: string;
-  posters: string[];
+  trailerId?: string;
+  posters?: string[];
+  showTrailer?: boolean;
+  showPosters?: boolean;
 };
 
 export default function MovieShowcase({
   trailerId,
   posters,
+  showTrailer = true,
+  showPosters = true,
 }: MovieShowcaseProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -40,19 +44,22 @@ export default function MovieShowcase({
       className="w-full max-w-7xl mx-auto px-4 py-10 pl-16 md:pl-20 lg:pl-0"
     >
       {/* Video - Full Width */}
-      <div className="animate-item rounded-2xl overflow-hidden bg-black relative group mb-8">
-        <iframe
-          className="w-full aspect-video"
-          src={`https://www.youtube.com/embed/${trailerId}`}
-          title="Movie Trailer"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
+      {showTrailer && trailerId && (
+        <div className="animate-item rounded-2xl overflow-hidden bg-black relative group mb-8">
+          <iframe
+            className="w-full aspect-video"
+            src={`https://www.youtube.com/embed/${trailerId}`}
+            title="Movie Trailer"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
 
-        <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-t from-black/40 to-transparent" />
-      </div>
+          <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-t from-black/40 to-transparent" />
+        </div>
+      )}
 
       {/* Poster Swiper - Below Video */}
+      {showPosters && posters && posters.length > 0 && (
       <div className="animate-item">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -72,6 +79,7 @@ export default function MovieShowcase({
           ))}
         </Swiper>
       </div>
+      )}
     </div>
   );
 }
