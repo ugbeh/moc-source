@@ -57,16 +57,6 @@ export default function LandingPage() {
         />
       </section>
 
-      {/* Posters Section - After The Film Section */}
-      <section className="bg-neutral-950 text-white py-12">
-        <header className="border-b p-10 lg:p-16 flex justify-between items-center">
-        <div className="lg:text-[70px] text-[40px] tracking-tight4 leading-0 font-guthenBloots text-gray-200">
-          The Mothers
-        </div>
-      </header>
-        <PostersSection />
-      </section>
-
       {/* the film section */}
       <SectionWithBackground
         id="the-film-section"
@@ -78,6 +68,16 @@ export default function LandingPage() {
           <TheFilmBox />
         </div>
       </SectionWithBackground>
+
+      {/* Posters Section - After The Film Section */}
+      <section className="bg-neutral-950 text-white py-12">
+        <header className="border-b p-10 lg:p-16 flex justify-between items-center">
+        <div className="lg:text-[70px] text-[40px] tracking-tight4 leading-0 font-guthenBloots text-gray-200">
+          The Mothers
+        </div>
+      </header>
+        <PostersSection />
+      </section>
 
       {/* <section
         id="the-mothers"

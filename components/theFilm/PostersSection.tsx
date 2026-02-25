@@ -44,8 +44,8 @@ export default function PostersSection() {
                 src={mother.image}
                 alt={mother.name}
                 width={500}
-                height={600}
-                className="w-full h-[600px] object-cover transition-transform duration-500 group-hover:scale-105"
+                height={700}
+                className="w-full h-[700px] object-cover transition-transform duration-500 group-hover:scale-105"
               />
               {/* Overlay with text on hover */}
               <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center text-center p-6">
