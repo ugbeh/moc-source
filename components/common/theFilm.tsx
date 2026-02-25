@@ -130,7 +130,7 @@ export default function TheFilmBox() {
             ))}
         </p>
 
-        <ScreeningGrid />
+        {/* <ScreeningGrid /> */}
       </div>
     </section>
   );
