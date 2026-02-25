@@ -190,7 +190,7 @@ export default function Navigation({ muted, setMuted }: NavigationProps) {
                 }}
               >
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all duration-300" />
-                <span className="relative z-10 font-afolkalips text-white text-4xl sm:text-5xl md:text-[100px] text-center tracking-tight4 leading-none px-6">
+                <span className="relative z-10 font-guthenBloots text-white text-4xl sm:text-5xl md:text-[100px] text-center tracking-tight4 leading-none px-6">
                   {item.label}
                 </span>
               </a>
@@ -213,7 +213,7 @@ export default function Navigation({ muted, setMuted }: NavigationProps) {
             }}
           >
             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all duration-300" />
-            <span className="relative z-10 font-afolkalips px-10 py-5 text-center tracking-tight4 text-white leading-0 text-3xl sm:text-4xl md:text-[100px]">
+            <span className="relative z-10 font-guthenBloots px-10 py-5 text-center tracking-tight4 text-white leading-0 text-3xl sm:text-4xl md:text-[100px]">
               {MENU_ITEMS[2].label}
             </span>
           </a>
@@ -236,7 +236,7 @@ export default function Navigation({ muted, setMuted }: NavigationProps) {
                 }}
               >
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all duration-300" />
-                <span className="relative z-10 font-afolkalips text-white text-4xl sm:text-5xl md:text-[100px] text-center tracking-tight4 leading-none px-6">
+                <span className="relative z-10 font-guthenBloots text-white text-4xl sm:text-5xl md:text-[100px] text-center tracking-tight4 leading-none px-6">
                   {item.label}
                 </span>
               </a>
@@ -261,7 +261,7 @@ export default function Navigation({ muted, setMuted }: NavigationProps) {
                 }}
               >
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all duration-300" />
-                <span className="relative z-10 font-afolkalips text-white text-4xl sm:text-5xl md:text-[100px] text-center tracking-tight4 leading-none px-6">
+                <span className="relative z-10 font-guthenBloots text-white text-4xl sm:text-5xl md:text-[100px] text-center tracking-tight4 leading-none px-6">
                   {item.label}
                 </span>
               </a>

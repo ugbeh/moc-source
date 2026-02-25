@@ -46,7 +46,7 @@ const FilmmakersSection = () => {
             <FaFilm className="text-[#B89C58] text-lg" />
             <div className="h-px w-12 bg-gradient-to-l from-transparent to-[#B89C58]/60" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-afolkalips text-white mb-3">
+          <h2 className="text-5xl md:text-6xl font-guthenBloots text-white mb-3">
             From the <span className="text-[#B89C58]">Filmmakers</span>
           </h2>
           <p className="text-gray-400 font-productsFont">
@@ -79,7 +79,7 @@ const FilmmakersSection = () => {
                   
                   {/* Content */}
                   <div className="flex-1 text-center md:text-left">
-                    <h3 className="text-xl md:text-2xl font-bold text-white mb-0.5 group-hover:text-[#D4AF37] transition-colors duration-300">
+                    <h3 className="text-3xl md:text-4xl font-guthenBloots text-white mb-0.5 group-hover:text-[#D4AF37] transition-colors duration-300">
                       {filmmaker.name}
                     </h3>
                     

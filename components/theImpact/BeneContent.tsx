@@ -62,7 +62,7 @@ const BeneContent = () => {
       <div className="mx-auto space-y-36">
         {/* Heading */}
         <div className="px-8">
-          <h2 className="text-center mb-10 font-productsFont text-5xl">
+          <h2 className="text-center mb-10 font-guthenBloots text-7xl">
             Beneficiaries
           </h2>
 

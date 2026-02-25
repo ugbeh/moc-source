@@ -20,7 +20,7 @@ export default function SupportSection() {
   return (
     <section className="min-h-screen text-white flex flex-col justify-between font-productsFont tracking-tight3 py-10">
       <header className="w-full border-b p-16 flex justify-between items-center">
-        <div className="text-[70px] tracking-tight4 leading-0 font-afolkalips text-gray-200">
+        <div className="text-[70px] tracking-tight4 leading-0 font-guthenBloots text-gray-200">
           Plant a Seed
         </div>
       </header>

@@ -5,7 +5,7 @@ const TheHeadline = () => {
   return (
     <>
       <header className="border-b p-10 lg:p-16 flex justify-between items-center">
-        <div className="lg:text-[70px] text-[40px] tracking-tight4 leading-0 font-afolkalips text-gray-200">
+        <div className="lg:text-[70px] text-[40px] tracking-tight4 leading-0 font-guthenBloots text-gray-200">
           The Impact
         </div>
       </header>

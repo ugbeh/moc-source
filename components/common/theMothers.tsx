@@ -55,9 +55,9 @@ function MotherSection({
             reverse ? "lg:order-1 lg:text-right" : "lg:order-2 lg:text-left"
           }`}
         >
-          <h1 className="text-2xl lg:text-5xl mb-4 font-productsFont">
+          <h1 className="text-2xl lg:text-5xl mb-4 font-guthenBloots">
             {name}{" "}
-            <span className="text-sm lg:text-xl text-gray-400">{role}</span>
+            <span className="text-xl lg:text-2xl text-gray-400">{role}</span>
           </h1>
           {mounted ? (
             <p
@@ -103,7 +103,7 @@ export default function TheMothers() {
   return (
     <div className=" text-white space-y-20">
       <header className="border-b p-10 lg:p-16 flex justify-between items-center">
-        <div className="lg:text-[70px] text-[40px] tracking-tight4 leading-0 font-afolkalips text-gray-200">
+        <div className="lg:text-[70px] text-[40px] tracking-tight4 leading-0 font-guthenBloots text-gray-200">
           The Mothers
         </div>
       </header>

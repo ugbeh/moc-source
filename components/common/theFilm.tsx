@@ -25,7 +25,7 @@ const screenings: Screening[] = [
 
 const ScreeningGrid = () => (
   <div className="mt-16 px-4 md:px-8 max-w-6xl mx-auto">
-    <h3 className="text-white text-4xl md:text-5xl lg:text-6xl font-afolkalips mb-8 text-left">
+    <h3 className="text-white text-4xl md:text-5xl lg:text-6xl font-guthenBloots mb-8 text-left">
       Screening Dates
     </h3>
 
@@ -113,7 +113,7 @@ export default function TheFilmBox() {
   return (
     <section ref={containerRef}>
       <header className="border-b p-10 lg:p-16 flex justify-between items-center">
-        <div className="lg:text-[70px] text-[40px] tracking-tight4 leading-0 font-afolkalips text-gray-200">
+        <div className="lg:text-[70px] text-[40px] tracking-tight4 leading-0 font-guthenBloots text-gray-200">
           About The Film
         </div>
       </header>

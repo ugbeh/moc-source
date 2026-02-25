@@ -20,7 +20,7 @@ const ContactHero = () => {
     <div className="min-h-screen flex flex-col justify-between text-white font-productsFont">
       {/* Header */}
        <header className="border-b p-10 lg:p-16 flex justify-between items-center">
-        <div className="lg:text-[70px] text-[40px] tracking-tight4 leading-0 font-afolkalips text-gray-200">
+        <div className="lg:text-[70px] text-[40px] tracking-tight4 leading-0 font-guthenBloots text-gray-200">
           Contact us
         </div>
       </header>
@@ -28,7 +28,7 @@ const ContactHero = () => {
       {/* Hero Section */}
       <main className="flex flex-col items-center justify-center flex-grow text-center px-8">
         <header className="relative w-full mt-10">
-          <h2 className="font-afolkalips text-[15vw] leading-none tracking-tight">
+          <h2 className="font-guthenBloots text-[15vw] leading-none tracking-tight">
             Reach Out to Us
           </h2>
           <button
@@ -87,7 +87,7 @@ const ContactHero = () => {
           }}
         >
           <div className="w-full max-w-lg px-6 py-10 bg-black/70 rounded-lg">
-            <h2 className="text-center text-3xl lg:text-5xl font-afolkalips mb-8">
+            <h2 className="text-center text-3xl lg:text-5xl font-guthenBloots mb-8">
               SEND US A MESSAGE
             </h2>
 

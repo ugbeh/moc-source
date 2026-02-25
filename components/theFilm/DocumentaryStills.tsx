@@ -36,7 +36,7 @@ export default function DocumentaryStills() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center"
         >
-          <h2 className="text-4xl md:text-6xl font-afolkalips text-white mb-6">
+          <h2 className="text-4xl md:text-6xl font-guthenBloots text-white mb-6">
             Photo <span className="text-[#B89C58]">Gallery</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#B89C58] to-transparent mx-auto" />
