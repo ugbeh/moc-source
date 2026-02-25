@@ -157,7 +157,7 @@ export default function Navigation({ muted, setMuted }: NavigationProps) {
             href="https://paystack.shop/pay/plant-a-seed"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-productsFont font-semibold text-sm bg-white hover:bg-[#D4AF37] text-neutral-900 px-5 py-2 rounded-full transition-all duration-300 hover:shadow-[0_0_20px_rgba(184,156,88,0.3)]"
+            className="font-productsFont font-semibold text-sm bg-black hover:bg-[#D4AF37] text-white px-5 py-2 rounded-full transition-all duration-300 hover:shadow-[0_0_20px_rgba(184,156,88,0.3)]"
           >
             Donate
           </a>

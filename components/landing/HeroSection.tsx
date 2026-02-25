@@ -48,36 +48,23 @@ const HeroSection = ({ onOpen, onWatchTrailer }: Props) => {
         />
       </motion.div> */}
 
-      <h1
-        className="
-          font-guthenBloots 
-          tracking-tight4 
-          flex flex-wrap justify-center text-center
-          text-[50px]       
-          md:text-[100px]    
-          lg:text-[140px]    
-          2xl:text-[165px]   
-          mt-5
-          md:mt-10
-          lg:mt-12
-          3xl:mt-16
-          mb-4
-          font-extrabold
-        "
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="mt-12 md:mt-16 lg:mt-20 3xl:mt-24 mb-4"
       >
-        {title.split("").map((char, i) => (
-          <motion.span
-            key={i}
-            custom={i}
-            variants={letterAnimation}
-            initial="hidden"
-            animate="visible"
-            className="inline-block"
-          >
-            {char === " " ? "\u00A0" : char}
-          </motion.span>
-        ))}
-      </h1>
+        <Image
+          src="/assets/images/mocx.png"
+          alt="Mothers of Chibok"
+          width={1200}
+          height={300}
+          className="
+            w-[clamp(200px,50vw,800px)]
+            h-auto
+          "
+        />
+      </motion.div>
 
       <p
         className="
