@@ -13,6 +13,7 @@ module.exports = {
         afolkalips: ["var(--font-afolkalips)", "sans-serif"],
         hahmlet: ["var(--font-hahmlet)", "sans-serif"],
         productsFont: ["var(--font-productsFont)", "sans-serif"],
+        guthenBloots: ["var(--font-guthenBloots)", "sans-serif"],
       },
       fontWeight: {
         thin: 100,

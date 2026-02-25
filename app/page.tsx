@@ -2,23 +2,17 @@
 import { useState, useRef } from "react";
 
 import Navigation from "@/components/common/Navigation";
-import Logo from "@/components/landing/Logo";
 import LandingSection from "@/components/LandingSection";
 
 import TheFilmBox from "@/components/common/theFilm";
 import SectionWithBackground from "@/components/SectionBackground";
 import TheMothers from "@/components/common/theMothers";
-// import Header from "@/components/common/Header";
-// import Partnership from "@/components/theImpact/Partnership";
 import GoalsTimeline from "@/components/theImpact/GoalsTimeline";
 import BeneContent from "@/components/theImpact/BeneContent";
 import PressMentions from "@/components/theImpact/PressMentions";
-//import TheImpactContent from "@/components/theImpact/TheImpactContent";
 import TheHeadline from "@/components/theImpact/TheHeadline";
-// import CreditSection from "@/components/theFilm/CreditSection";
 import ContactHero from "@/components/contacts/ContactHero";
 import SupportSection from "@/components/SupportSection";
-import Image from "next/image";
 import MovieBento from "@/components/mocMovie";
 import FilmmakersSection from "@/components/theFilm/FilmmakersSection";
 import DocumentaryStills from "@/components/theFilm/DocumentaryStills";
@@ -34,7 +28,6 @@ export default function LandingPage() {
   return (
     <main>
       <Navigation muted={muted} setMuted={setMuted} />
-      <Logo />
 
       {/* main section */}
       <section id="landing-section" className="relative h-screen">
@@ -50,7 +43,7 @@ export default function LandingPage() {
         <LandingSection onWatchTrailer={scrollToTrailer} />
       </section>
 
-      {/* Trailer Section - Positioned directly below hero (using MovieBento with trailer + posters) */}
+      {/* Trailer Section */}
       <section 
         ref={trailerRef}
         id="trailer-section" 
@@ -76,16 +69,9 @@ export default function LandingPage() {
         className="min-w-full relative z-10"
       >
         <div className="min-h-[130vh]">
-          {/*<CreditSection />*/}
           <TheFilmBox />
         </div>
       </SectionWithBackground>
-
-      {/* Filmmakers Section */}
-      <FilmmakersSection />
-
-      {/* Documentary Stills Section */}
-      <DocumentaryStills />
 
       <section
         id="the-mothers"
@@ -96,11 +82,18 @@ export default function LandingPage() {
           <TheMothers />
         </div>
       </section>
+
+      {/* Filmmakers Section */}
+      <FilmmakersSection />
+
+      {/* Documentary Stills Section */}
+      <DocumentaryStills />
+      
       <section
-        className="h-screen  items-start bg-cover bg-center"
+        className="h-screen items-start bg-cover bg-center"
         style={{ backgroundImage: "url('/assets/images/moc-web-image-2.jpg')" }}
       >
-        <div className="mx-auto max-w-6xl flex flex-col items-center justify-center text-center pl-20 pr-5">
+        <div className="mx-auto max-w-6xl flex flex-col items-center justify-center text-center px-8">
           <img
             src="/assets/images/moc-encounter-award.png"
             className="lg:w-64 lg:h-64 w-24 h-24 mt-5"
@@ -127,11 +120,9 @@ export default function LandingPage() {
       >
         <div className="min-w-full relative z-10">
           <TheHeadline />
-          {/*<TheImpactContent />*/}  
           <BeneContent />
-          <PressMentions />
+          
           <GoalsTimeline />
-          {/*<Partnership />*/}
         </div>
       </section>
 
@@ -144,6 +135,16 @@ export default function LandingPage() {
       >
         <div className="min-w-full relative z-10">
           <SupportSection />
+        </div>
+      </section>
+
+        <section
+        id="the-impact"
+        className="min-h-screen flex items-center justify-center bg-fixed bg-cover bg-center"
+        style={{ backgroundImage: "url('/assets/images/the-impact-bg.jpg')" }}
+      >
+        <div className="min-w-full relative z-10">
+          <PressMentions />
         </div>
       </section>
 

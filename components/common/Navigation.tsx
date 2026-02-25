@@ -56,12 +56,12 @@ export default function Navigation({ muted, setMuted }: NavigationProps) {
 
   useEffect(() => {
     if (menuOpen) {
-      // Reset overlay off-screen before animating
-      gsap.set(overlayRef.current, { x: "-100%", autoAlpha: 1 });
+      // Reset overlay off-screen (top) before animating
+      gsap.set(overlayRef.current, { y: "-100%", autoAlpha: 1 });
 
-      // Slide overlay in
+      // Slide overlay in from top
       gsap.to(overlayRef.current, {
-        x: "0%",
+        y: "0%",
         duration: 0.6,
         ease: "power2.out",
       });
@@ -69,9 +69,9 @@ export default function Navigation({ muted, setMuted }: NavigationProps) {
       // Animate menu items with stagger
       gsap.fromTo(
         itemsRef.current,
-        { x: -30, opacity: 0 },
+        { y: -30, opacity: 0 },
         {
-          x: 0,
+          y: 0,
           opacity: 1,
           duration: 0.6,
           stagger: 0.15,
@@ -80,9 +80,9 @@ export default function Navigation({ muted, setMuted }: NavigationProps) {
         }
       );
     } else {
-      // Slide overlay out
+      // Slide overlay out to top
       gsap.to(overlayRef.current, {
-        x: "-100%",
+        y: "-100%",
         duration: 0.5,
         ease: "power3.inOut",
         onComplete: () => {
@@ -122,21 +122,21 @@ export default function Navigation({ muted, setMuted }: NavigationProps) {
         playsInline
         muted={muted}
       />
-      {/* Vertical Navigation (Left side) */}
-      <div className="fixed inset-y-0 left-0 flex flex-col items-center justify-between py-6 px-4 text-white text-xs tracking-wide border-r-2 border-white z-40 max-w-full">
-        {/* Top Text */}
+      {/* Horizontal Navigation (Top) */}
+      <div className="fixed inset-x-0 top-0 flex flex-row items-center justify-between py-4 px-6 text-white text-xs tracking-wide z-40 max-w-full">
+        {/* Left Text */}
         <a href="https://jbmultimedia.com" target="_blank" rel="noopener noreferrer">
-          <span className="rotate-180 font-productsFont tracking-tight3 text-[16px] [writing-mode:vertical-rl]">
-            By Kachi Benson
+          <span className="font-productsFont tracking-tight3 text-[16px]">
+            Hope, resilience, and healing
           </span>
         </a>
 
         {/* Menu Icon + Text */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="flex flex-col items-center gap-2 p-2 hover:text-yellow-500 transition cursor-pointer"
+          className="flex flex-row items-center gap-2 p-2 hover:text-yellow-500 transition cursor-pointer"
         >
-          <span className="rotate-180 font-productsFont text-[14px] tracking-wide [writing-mode:vertical-rl]">
+          <span className="font-productsFont text-[14px] tracking-wide">
             Menu
           </span>
           {menuOpen ? (
@@ -151,10 +151,10 @@ export default function Navigation({ muted, setMuted }: NavigationProps) {
           )}
         </button>
 
-        {/* Bottom Text + Sound Toggle */}
-        <div className="flex flex-col items-center space-y-4">
-          <span className="rotate-180 font-productsFont tracking-tight3 text-[16px] [writing-mode:vertical-rl]">
-            Hope, resilience, and healing
+        {/* Right Text + Sound Toggle */}
+        <div className="flex flex-row items-center gap-4">
+          <span className="font-productsFont tracking-tight3 text-[16px]">
+            Donate
           </span>
           <button
             onClick={() => setMuted(!muted)}
@@ -171,7 +171,7 @@ export default function Navigation({ muted, setMuted }: NavigationProps) {
         className="fixed inset-0 flex flex-col z-30 items-center min-h-screen opacity-0"
       >
         {/* Menu Items */}
-        <nav className="flex flex-col w-full h-full ml-[140px]">
+        <nav className="flex flex-col w-full h-full pt-[60px]">
           {/* First row: The Film and Cinemas (two-column layout) */}
           <div className="flex flex-1 w-full">
             {MENU_ITEMS.slice(0, 2).map((item, i) => (

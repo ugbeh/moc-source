@@ -61,7 +61,7 @@ const BeneContent = () => {
     >
       <div className="mx-auto space-y-36">
         {/* Heading */}
-        <div className="pl-24 pr-5">
+        <div className="px-8">
           <h2 className="text-center mb-10 font-productsFont text-5xl">
             Beneficiaries
           </h2>

@@ -106,10 +106,10 @@ export default function Loader({ onFinish }: LoaderProps) {
         autoPlay
         loop
         muted
-        playsInline
       />
 
-      {/* Dark Overlay */}
+      {/*        playsInline
+ Dark Overlay */}
       <div className="absolute inset-0 bg-black/50" />
 
       {/* Line + Loading */}
@@ -141,7 +141,7 @@ export default function Loader({ onFinish }: LoaderProps) {
         </div>
 
         {/* Paragraphs */}
-        <div className="max-w-4xl text-center text-[11px] lg:text-[16px] text-white font-hahmlet font-thin leading-relaxed tracking-tight space-y-4 pl-24 pr-5">
+        <div className="max-w-4xl text-center text-[11px] lg:text-[16px] text-white font-hahmlet font-thin leading-relaxed tracking-tight space-y-4 px-8">
           {paragraphs.map((text, i) => (
             <p
               key={i}

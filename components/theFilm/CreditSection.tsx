@@ -34,13 +34,13 @@ const CREDIT_ROWS: {
 const CreditSection = () => {
   return (
     <section className=" mx-auto">
-       <header className="border-b p-16 flex justify-between items-center relative left-[69px]">
+       <header className="border-b p-16 flex justify-between items-center">
         <div className="text-[70px] tracking-tight4 leading-0 font-afolkalips text-gray-200">
           The Film
         </div>
       </header>
       {/* Content */}
-      <div className="relative mx-auto flex flex-col items-center justify-center px-20 py-10 md:px-12 lg:py-16">
+      <div className="relative mx-auto flex flex-col items-center justify-center px-8 md:px-12 lg:py-16 py-10">
         <div className="w-full">
           <div className="mx-auto space-y-6 text-center">
             {/* Rows */}

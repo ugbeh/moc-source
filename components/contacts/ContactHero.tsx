@@ -19,14 +19,14 @@ const ContactHero = () => {
   return (
     <div className="min-h-screen flex flex-col justify-between text-white font-productsFont">
       {/* Header */}
-       <header className="border-b p-10 lg:p-16 flex justify-between items-center relative left-[69px]">
+       <header className="border-b p-10 lg:p-16 flex justify-between items-center">
         <div className="lg:text-[70px] text-[40px] tracking-tight4 leading-0 font-afolkalips text-gray-200">
           Contact us
         </div>
       </header>
 
       {/* Hero Section */}
-      <main className="flex flex-col items-center justify-center flex-grow text-center pl-24 pr-5">
+      <main className="flex flex-col items-center justify-center flex-grow text-center px-8">
         <header className="relative w-full mt-10">
           <h2 className="font-afolkalips text-[15vw] leading-none tracking-tight">
             Reach Out to Us
@@ -52,7 +52,7 @@ const ContactHero = () => {
       </main>
 
       {/* Footer */}
-      <footer className="w-full flex flex-col lg:flex-row items-center justify-between text-center gap-6 lg:gap-0 pt-16 pb-7 pl-24 pr-5 lg:px-24">
+      <footer className="w-full flex flex-col lg:flex-row items-center justify-between text-center gap-6 lg:gap-0 pt-16 pb-7 px-8 lg:px-24">
         <p className="text-sm">All rights reserved.</p>
 
         <div className="flex flex-col items-center justify-center gap-3 text-sm max-w-sm">
@@ -81,7 +81,7 @@ const ContactHero = () => {
       {/* Modal */}
       {isModalOpen && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-cover bg-center pl-24 pr-5"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-cover bg-center px-8"
           style={{
             backgroundImage: "url('/assets/images/moc-background-dark.jpg')",
           }}

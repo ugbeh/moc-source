@@ -27,14 +27,14 @@ type Props = {
 const HeroSection = ({ onOpen, onWatchTrailer }: Props) => {
   const title = "Mothers of Chibok";
   const subtitle =
-    "A story of hope, resilience, and healing, through mothers, memory, and peanuts";
+    "If you think you know their story, think again.";
 
   // Target date: February 27, 2026
   const targetDate = new Date("2026-02-27T00:00:00");
 
   return (
     <div className="relative z-10 flex flex-col items-center h-full text-center text-white pt-6 pl-10 3xl:max-w-[1744px] mx-auto">
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.3 }}
@@ -46,21 +46,22 @@ const HeroSection = ({ onOpen, onWatchTrailer }: Props) => {
           height={350}
           className="w-[clamp(200px,20vw,450px)] h-auto"
         />
-      </motion.div>
+      </motion.div> */}
 
       <h1
         className="
-          font-afolkalips 
+          font-guthenBloots 
           tracking-tight4 
           flex flex-wrap justify-center text-center
           text-[50px]       
           md:text-[100px]    
           lg:text-[140px]    
           2xl:text-[165px]   
-          -mt-5
-          md:-mt-10
-          lg:-mt-12
-          3xl:-mt-16
+          mt-5
+          md:mt-10
+          lg:mt-12
+          3xl:mt-16
+          mb-4
         "
       >
         {title.split("").map((char, i) => (
@@ -85,15 +86,12 @@ const HeroSection = ({ onOpen, onWatchTrailer }: Props) => {
           leading-3
           mb-2
           text-center
-          -mt-[22px]
-          md:-mt-5
-          lg:-mt-12
-          3xl:-mt-16
-          text-[13px]       
-          md:text-[14px]    
-          lg:text-[16px]    
-          xl:text-[18px]
-          2xl:text-[21px]   
+         
+          text-[14px]       
+          md:text-[16px]    
+          lg:text-[18px]    
+          xl:text-[21px]
+          2xl:text-[24px]   
         "
       >
         {subtitle.split(" ").map((word, i) => (
@@ -115,9 +113,9 @@ const HeroSection = ({ onOpen, onWatchTrailer }: Props) => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.2 }}
-        className="mt-4"
+        className="mt-8"
       >
-        <h2 className="font-productsFont text-xl md:text-2xl lg:text-3xl font-bold text-white tracking-wide">
+        <h2 className="font-productsFont text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-wide">
           In Cinemas February 27th
         </h2>
         {/* <p className="font-productsFont text-sm md:text-base text-white/80 mt-1">

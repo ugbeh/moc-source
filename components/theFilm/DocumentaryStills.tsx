@@ -37,7 +37,7 @@ export default function DocumentaryStills() {
           className="text-center"
         >
           <h2 className="text-4xl md:text-6xl font-afolkalips text-white mb-6">
-            Documentary <span className="text-[#B89C58]">Stills</span>
+            Photo <span className="text-[#B89C58]">Gallery</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#B89C58] to-transparent mx-auto" />
         </motion.div>

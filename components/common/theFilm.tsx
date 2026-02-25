@@ -25,12 +25,12 @@ const screenings: Screening[] = [
 
 const ScreeningGrid = () => (
   <div className="mt-16 px-4 md:px-8 max-w-6xl mx-auto">
-    <h3 className="text-white text-4xl md:text-5xl lg:text-6xl font-afolkalips mb-8 text-left pl-16 md:pl-20 lg:pl-6">
+    <h3 className="text-white text-4xl md:text-5xl lg:text-6xl font-afolkalips mb-8 text-left">
       Screening Dates
     </h3>
 
     {/* Full width cards on mobile, 2 columns on desktop (card pushed to right half) */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 pl-16 md:pl-20 lg:pl-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
       {/* Empty first column to push card to right half on desktop only */}
       <div className="hidden md:block"></div>
       
@@ -58,20 +58,6 @@ const ScreeningGrid = () => (
         </div>
       </div>
     </div>
-
-    {/* Press mentions */}
-    {/* <div className="mt-6 md:mt-8 font-bold mb-10 ">
-      <div className="text-white text-right text-sm md:text-lg items-center flex gap-2 pl-16 md:pl-20 lg:pl-6">
-        Press mentions
-        <Image
-          src="/assets/images/forward-arrow.png"
-          alt="Mothers of Chibok"
-          width={12}
-          height={12}
-          className="animate-pulse-custom"
-        />
-      </div>
-    </div> */}
   </div>
 );
 
@@ -126,15 +112,15 @@ export default function TheFilmBox() {
 
   return (
     <section ref={containerRef}>
-      <header className="border-b p-10 lg:p-16 flex justify-between items-center relative left-[69px]">
+      <header className="border-b p-10 lg:p-16 flex justify-between items-center">
         <div className="lg:text-[70px] text-[40px] tracking-tight4 leading-0 font-afolkalips text-gray-200">
-          The Film
+          About The Film
         </div>
       </header>
 
       <div className="m-auto lg:space-y-56">
         {/* Animated paragraph */}
-        <p className="film-paragraph w-full font-productsFont tracking-tight3 text-lg lg:text-2xl leading-snug pl-24 pr-5 lg:px-28 text-white mt-10 lg:mt-28 lg:mb-20 md:text-center">
+        <p className="film-paragraph w-full font-productsFont tracking-tight3 text-lg lg:text-2xl leading-snug px-8 lg:px-28 text-white mt-10 lg:mt-28 lg:mb-20 md:text-center">
           {"In a small village in Northeast Nigeria, a community of mothers forge a path forward after the tragic events of April 2014 when their daughters were kidnapped by Boko Haram. The film follows four mothers over a farming season as they fight for their children and their futures. Mothers of Chibok paints a visceral portrait of courage, faith, and the enduring power of hope."
             .match(/[^.!?]+[.!?]/g)
             ?.map((sentence, i) => (

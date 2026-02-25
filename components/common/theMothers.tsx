@@ -33,7 +33,7 @@ function MotherSection({
   return (
     <div
       ref={sectionRef}
-      className="mother-section container m-auto pl-24 pr-5 lg:px-34 py-8 sm:py-12"
+      className="mother-section container m-auto px-8 lg:px-34 py-8 sm:py-12"
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
         <div
@@ -102,13 +102,13 @@ export default function TheMothers() {
 
   return (
     <div className=" text-white space-y-20">
-      <header className="border-b p-10 lg:p-16 flex justify-between items-center relative left-[69px]">
+      <header className="border-b p-10 lg:p-16 flex justify-between items-center">
         <div className="lg:text-[70px] text-[40px] tracking-tight4 leading-0 font-afolkalips text-gray-200">
           The Mothers
         </div>
       </header>
       <div className="container m-auto max-w-7xl">
-        <p className="lg:text-center  pl-24 pr-5 font-productsFont text-lg lg:text-2xl tracking-tight leading-relaxed">
+        <p className="lg:text-center px-8 font-productsFont text-lg lg:text-2xl tracking-tight leading-relaxed">
           They are mothers, sisters, teachers, and daughters, women whose lives were forever altered by 
           the tragedy in Chibok. But this is not just a story of loss. It's a story of what happens after. 
           Each woman carries a different piece of this shared grief, and yet, through farming, teaching, 

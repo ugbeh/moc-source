@@ -37,3 +37,15 @@ export const productsFont = localFont({
   variable: "--font-productsFont",
   display: "swap",
 })
+
+export const guthenBloots = localFont({
+  src: [
+    {
+      path: "../public/assets/fonts/GuthenBloots.woff2",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-guthenBloots",
+  display: "swap",
+})

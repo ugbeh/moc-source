@@ -19,16 +19,16 @@ export default function SupportSection() {
 
   return (
     <section className="min-h-screen text-white flex flex-col justify-between font-productsFont tracking-tight3 py-10">
-      <header className="w-full border-b p-16 flex justify-between items-center max-w-[1845px] relative left-[69px]">
+      <header className="w-full border-b p-16 flex justify-between items-center">
         <div className="text-[70px] tracking-tight4 leading-0 font-afolkalips text-gray-200">
           Plant a Seed
         </div>
       </header>
 
       {/* Top Content */}
-      <div className="mt-10 pl-24 pr-5 lg:px-34">
+      <div className="mt-10 px-8 lg:px-34">
         <h2 className="text-xl md:text-3xl mb-4">Why your support matters:</h2>
-        <div className="pl-14 lg:pl-20">
+        <div className="lg:pl-8">
           <p className="text-lg mb-6">
             Real change happens when stories move people to action. By
             supporting this project, you stand with the mothers of Chibok as
@@ -52,7 +52,7 @@ export default function SupportSection() {
       </div>
 
       {/* Bottom Content */}
-      <div className="flex flex-col md:flex-row items-start md:items-center pl-24 pr-5 lg:px-34 gap-10 md:gap-0">
+      <div className="flex flex-col md:flex-row items-start md:items-center px-8 lg:px-34 gap-10 md:gap-0">
         <div className="w-full md:w-1/2 flex flex-col items-start">
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-10">
             <Image
@@ -97,7 +97,7 @@ export default function SupportSection() {
           </form>
         </div>
       </div>
-      <div className="px-6 ml-20 lg:ml-28 mt-10 mb-5">
+      <div className="px-6 mt-10 mb-5">
         <p className="text-lg text-center">
           Whether you give or gather, your support turns resilience into
           opportunity and ensures that Chibok is never forgotten.

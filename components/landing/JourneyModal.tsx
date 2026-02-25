@@ -36,13 +36,13 @@ const JourneyModal = ({ onClose }: { onClose: () => void }) => (
       className="relative w-full max-w-2xl bg-transparent p-8 sm:p-12"
     >
       <p className="text-gray-200 mb-10 font-hahmlet text-[18px]">
-        <span className="pl-20">The headlines may have faded...</span>
+        <span className="ml-20">The headlines may have faded...</span>
         <br />
-        <span className="pl-10">
+        <span className="ml-10">
           But in Chibok, the mothers still carry faith...
         </span>
         <br />
-        <span className="pl-24">Send them a short message of hope.</span>
+        <span className="ml-24">Send them a short message of hope.</span>
       </p>
 
       <div className="space-y-4">
