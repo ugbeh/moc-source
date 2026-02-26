@@ -17,7 +17,7 @@ const ScrollIndicator = () => (
       href="#trailer-section" 
       className="flex flex-col items-center px-10 py-5 transition-all duration-300 group"
     >
-      <span className="text-2xl font-productsFont font-bold bg-black rounded-lg px-8 py-4 tracking-wide text-white border-2 border-white/30 shadow-[0_0_30px_rgba(255,255,255,0.3)] group-hover:scale-110 group-hover:shadow-[0_0_50px_rgba(255,255,255,0.5)] transition-all duration-300 flex items-center gap-3">
+      <span className="text-2xl font-productsFont font-bold bg-white rounded-lg px-4 tracking-wide text-black border-2 border-yellow/30 shadow-[0_0_30px_rgba(255,255,255,0.3)] group-hover:scale-110 group-hover:shadow-[0_0_50px_rgba(255,255,255,0.5)] transition-all duration-300 flex items-center gap-1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
           <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
         </svg>
