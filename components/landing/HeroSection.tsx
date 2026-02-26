@@ -103,15 +103,15 @@ const HeroSection = ({ onOpen, onWatchTrailer }: Props) => {
         transition={{ duration: 0.8, delay: 1.2 }}
         className="mt-8"
       >
-        <h2 className="font-productsFont text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-wide">
-          In Cinemas February 27th
+        <h2 className="font-productsFont text-xl md:text-3xl lg:text-4xl font-bold text-white tracking-wide">
+          Now showing in cinemas across Nigeria & Ghana
         </h2>
         {/* <p className="font-productsFont text-sm md:text-base text-white/80 mt-1">
           Cinemas in Nigeria & Ghana
         </p> */}
         
         {/* Countdown Timer */}
-        <CountdownTimer targetDate={targetDate} />
+        {/* <CountdownTimer targetDate={targetDate} /> */}
         
         {/* CTA Buttons */}
         {/* <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-6">

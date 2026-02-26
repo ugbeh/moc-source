@@ -17,6 +17,7 @@ import MovieBento from "@/components/mocMovie";
 import FilmmakersSection from "@/components/theFilm/FilmmakersSection";
 import DocumentaryStills from "@/components/theFilm/DocumentaryStills";
 import PostersSection from "@/components/theFilm/PostersSection";
+import CinemaListings from "@/components/theFilm/CinemaListings";
 
 export default function LandingPage() {
   const [muted, setMuted] = useState(true);
@@ -91,6 +92,9 @@ export default function LandingPage() {
 
       {/* Filmmakers Section */}
       <FilmmakersSection />
+
+      {/* Cinema Listings Section */}
+      <CinemaListings />
 
       {/* Documentary Stills Section */}
       <DocumentaryStills />

@@ -126,7 +126,7 @@ export default function Navigation({ muted, setMuted }: NavigationProps) {
       <div className="fixed inset-x-0 top-0 flex flex-row items-center justify-between py-4 px-6 text-white text-xs tracking-wide z-40 max-w-full">
         {/* Left Text */}
         <a href="https://jbmultimedia.com" target="_blank" rel="noopener noreferrer">
-          <span className="font-productsFont tracking-tight3 text-[18px]">
+          <span className="font-productsFont tracking-tight3 text-[16px]">
             Hope, resilience, and healing
           </span>
         </a>
@@ -136,7 +136,7 @@ export default function Navigation({ muted, setMuted }: NavigationProps) {
           onClick={() => setMenuOpen(!menuOpen)}
           className="flex flex-row items-center gap-2 p-2 hover:text-yellow-500 transition cursor-pointer"
         >
-          <span className="font-productsFont text-[16px] tracking-wide">
+          <span className="font-productsFont text-[14px] tracking-wide">
             Menu
           </span>
           {menuOpen ? (
@@ -157,7 +157,7 @@ export default function Navigation({ muted, setMuted }: NavigationProps) {
             href="https://paystack.shop/pay/plant-a-seed"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-productsFont font-bold text-lg bg-white hover:bg-gray-100 text-black px-8 py-4 rounded-full transition-all duration-300 hover:shadow-[0_0_25px_rgba(255,255,255,0.6)] scale-105 hover:scale-110"
+            className="font-productsFont font-semibold text-sm bg-black hover:bg-[#D4AF37] text-white px-5 py-2 rounded-full transition-all duration-300 hover:shadow-[0_0_20px_rgba(184,156,88,0.3)]"
           >
             Donate
           </a>
