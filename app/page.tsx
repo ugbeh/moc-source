@@ -94,8 +94,9 @@ export default function LandingPage() {
       <FilmmakersSection />
 
       {/* Cinema Listings Section */}
-      <CinemaListings />
-
+      <section id="cinema-listings">
+          <CinemaListings />
+      </section>
       {/* Documentary Stills Section */}
       <DocumentaryStills />
       
