@@ -119,7 +119,7 @@ export default function TheMothers() {
         </p>
       </div>
       <MotherSection
-        image="/assets/images/yana-galang-moc.jpg"
+        image="/assets/images/n2.jpeg"
         alt="Yana Galang Mothers of Chibok"
         name="Yana Galang"
         role="Farmer/Community Leader"
@@ -133,7 +133,7 @@ export default function TheMothers() {
       />
 
       <MotherSection
-        image="/assets/images/lydia-yama-moc.jpg"
+        image="/assets/images/n6.jpeg"
         alt="Lydia Yama Mothers of Chibok"
         name="Lydia Yama"
         role="Mother/Farmer"
@@ -146,7 +146,7 @@ export default function TheMothers() {
       />
 
       <MotherSection
-        image="/assets/images/ladi-lawan-moc.jpg"
+        image="/assets/images/n1.jpeg"
         alt="Ladi Lawan Mothers of Chibok"
         name="Ladi Lawan"
         role="Mother/Teacher/Farmer"
@@ -160,7 +160,7 @@ export default function TheMothers() {
       />
 
       <MotherSection
-        image="/assets/images/maryam-ali-moc.jpg"
+        image="/assets/images/n4.jpeg"
         alt="Maryam Ali Mothers of Chibok"
         name="Maryam Ali"
         role="Mother/Student"
