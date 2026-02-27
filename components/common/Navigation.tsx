@@ -125,7 +125,7 @@ export default function Navigation({ muted, setMuted }: NavigationProps) {
       {/* Horizontal Navigation (Top) */}
       <div className="fixed inset-x-0 top-0 flex flex-row items-center justify-between py-4 px-6 text-white text-xs tracking-wide z-40 max-w-full">
         {/* Left Text */}
-        <a href="https://jbmultimedia.com" target="_blank" rel="noopener noreferrer">
+        <a href="#landing-section" rel="noopener noreferrer">
           <span className="font-productsFont tracking-tight3 text-[16px]">
             Hope, resilience, and healing
           </span>
